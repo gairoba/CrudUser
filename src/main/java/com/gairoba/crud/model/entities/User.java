@@ -5,13 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "TabMembro")
-public class Membro {
+@Table(name = "TabUser")
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,20 +20,24 @@ public class Membro {
 	private String sobreNome;
 	@NotBlank
 	private String email;
-	@Min(0) 
-	@Max(100)
-	private int idade;
 	
-	public Membro() {
+	//private String endereço;
+
+	//private String genero;
+	//private String dataNascimento;
+	
+	
+	
+	
+	public User() {
 		
 	}
 	
-	public Membro(String primeiroNome, String sobreNome, String email, int idade) {
+	public User(String primeiroNome, String sobreNome, String email) {
 		super();
 		this.primeiroNome = primeiroNome;
 		this.sobreNome = sobreNome;
 		this.email = email;
-		this.idade = idade;
 	}
 
 
@@ -79,18 +81,5 @@ public class Membro {
 	}
 
 
-	public int getIdade() {
-		return idade;
-	}
-
-
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-	
-	
-	
-	
-	
 	
 }
