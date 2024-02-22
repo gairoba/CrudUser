@@ -26,6 +26,9 @@ public class Membro {
 	@Max(100)
 	private int idade;
 	
+	public Membro() {
+		
+	}
 	
 	public Membro(String primeiroNome, String sobreNome, String email, int idade) {
 		super();

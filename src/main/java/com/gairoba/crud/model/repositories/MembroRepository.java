@@ -6,4 +6,9 @@ import com.gairoba.crud.model.entities.Membro;
 
 public interface MembroRepository extends CrudRepository<Membro, Long>{
 
+	
+	
+	
+
 }
+
