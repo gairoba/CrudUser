@@ -21,7 +21,7 @@ public class User {
 	@NotBlank
 	private String email;
 	
-	//private String endereço;
+	private Endereco endereco;
 
 	//private String genero;
 	//private String dataNascimento;
@@ -33,11 +33,12 @@ public class User {
 		
 	}
 	
-	public User(String primeiroNome, String sobreNome, String email) {
+	public User(String primeiroNome, String sobreNome, String email, Endereco endereco) {
 		super();
 		this.primeiroNome = primeiroNome;
 		this.sobreNome = sobreNome;
 		this.email = email;
+		this.endereco = new Endereco();
 	}
 
 
@@ -80,6 +81,14 @@ public class User {
 		this.email = email;
 	}
 
+	public Endereco getEndereco() {
+		return endereco;
+	}
 
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	
 	
 }
