@@ -1,36 +1,27 @@
 package com.gairoba.crud.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.Embeddable;
 
-@Entity
-@Table(name = "TabEndereco")
-
+@Embeddable
 public class Endereco {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
+
+//	private Long idEndereco;
+
 	private String logradouro;
-	
+
 	private String numero;
-	
+
 	private String cidade;
-	
+
 	private String estado;
 
 	private String cep;
-	
+
 	public Endereco() {
-		
+
 	}
-	
-	public Endereco(@NotBlank String logradouro, @NotBlank String numero, @NotBlank String cidade,
-			@NotBlank String estado, @NotBlank String cep) {
+
+	public Endereco(String logradouro, String numero, String cidade, String estado, String cep) {
 		super();
 		this.logradouro = logradouro;
 		this.numero = numero;
@@ -39,13 +30,13 @@ public class Endereco {
 		this.cep = cep;
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+//	public Long getIdEndereco() {
+//		return idEndereco;
+//	}
+//
+//	public void setIdEndereco(Long idEndereco) {
+//		this.idEndereco = idEndereco;
+//	}
 
 	public String getLogradouro() {
 		return logradouro;
@@ -86,8 +77,5 @@ public class Endereco {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	
-	
-	
-	
+
 }

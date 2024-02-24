@@ -21,7 +21,7 @@ public class User {
 	@NotBlank
 	private String email;
 	
-	private Endereco endereco;
+	//private Endereco endereco;
 
 	//private String genero;
 	//private String dataNascimento;
@@ -33,12 +33,12 @@ public class User {
 		
 	}
 	
-	public User(String primeiroNome, String sobreNome, String email, Endereco endereco) {
+	public User(String primeiroNome, String sobreNome, String email) {
 		super();
 		this.primeiroNome = primeiroNome;
 		this.sobreNome = sobreNome;
 		this.email = email;
-		this.endereco = new Endereco();
+		//this.endereco = new Endereco();
 	}
 
 
@@ -81,13 +81,13 @@ public class User {
 		this.email = email;
 	}
 
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
+//	public Endereco getEndereco() {
+//		return endereco;
+//	}
+//
+//	public void setEndereco(Endereco endereco) {
+//		this.endereco = endereco;
+//	}
 
 	
 	
